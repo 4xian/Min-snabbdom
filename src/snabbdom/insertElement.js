@@ -9,10 +9,15 @@ export default function insertElement(vnode) {
     if (vnode.text !== '' && vnode.children === undefined || vnode.children.length === 0) {
         // 1. vnode内部是文本  
         domNode.innerText = vnode.text;
-        vnode.elm = domNode;
+
     } else if (Array.isArray(vnode.children) && vnode.children.length > 0) {
         // 2. vnode内部是子节点
+        vnode.children.forEach(item => {
+            let tempdom = insertElement(item);
+            domNode.appendChild(tempdom);
+        })
     }
+    vnode.elm = domNode;
 
     return vnode.elm;
 }
