@@ -19,8 +19,8 @@ function () {
   function Dep() {
     _classCallCheck(this, Dep);
 
-    console.log('Dep类'); // 数组储存订阅者 Watcher实例
-
+    // console.log('Dep类');
+    // 数组储存订阅者 Watcher实例
     this.id = uid++;
     this.subs = [];
   } // 添加订阅
@@ -44,7 +44,7 @@ function () {
   }, {
     key: "notify",
     value: function notify() {
-      console.log('通知');
+      // console.log('通知');
       var tempSubs = this.subs.slice();
       tempSubs.forEach(function (item) {
         item.update();

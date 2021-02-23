@@ -4,7 +4,7 @@ var uid = 0;
 
 export default class Wathcher {
     constructor(target, expression, callback) {
-        console.log('Wathcher类');
+        // console.log('Wathcher类');
         this.id = uid++;
         this.target = target;
         this.getter = parsePath(expression);

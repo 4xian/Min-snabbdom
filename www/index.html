@@ -9,13 +9,33 @@
 </head>
 
 <body>
-    <button id="btn">改变dom</button>
-    <div id="box">
+    <!-- <button id="btn">改变dom</button> -->
+    <div id="app">
+        <!-- <div class="ceshi" v-if> -->
+        你好{{a}}
+        <!-- </div> -->
+        <input type="text" name="" id="" v-model="a">
     </div>
 
+    <script src="./xuni/bundle.js"></script>
     <script>
         // let box = document.getElementById('box');
         // console.log(box);
+        var min = new Min({
+            el: '#app',
+            data: {
+                a: 'jian',
+                b: {
+                    m: 'haha'
+                }
+            },
+            watch: {
+                a() {
+                    console.log('a变了');
+                }
+            }
+        })
+        // console.log(min);
     </script>
-    <script src="./xuni/bundle.js"></script>
+
 </body>

@@ -2,7 +2,7 @@ var uid = 0;
 
 export default class Dep {
     constructor() {
-        console.log('Dep类');
+        // console.log('Dep类');
         // 数组储存订阅者 Watcher实例
         this.id = uid++;
         this.subs = [];
@@ -23,7 +23,7 @@ export default class Dep {
 
     // 通知更新
     notify() {
-        console.log('通知');
+        // console.log('通知');
         const tempSubs = this.subs.slice();
         tempSubs.forEach(item => {
             item.update();

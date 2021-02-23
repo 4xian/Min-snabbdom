@@ -25,7 +25,7 @@ function () {
   function Wathcher(target, expression, callback) {
     _classCallCheck(this, Wathcher);
 
-    console.log('Wathcher类');
+    // console.log('Wathcher类');
     this.id = uid++;
     this.target = target;
     this.getter = parsePath(expression);
